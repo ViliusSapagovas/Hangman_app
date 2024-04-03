@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <title>{% block title %} {% endblock %} - HANGMAN</title>
     <style>
         h2 {
             width: 100%;
@@ -43,12 +43,12 @@
 
     </style>
 </head>
-<body>
+<body style="background-image: url('../static/gifs/lets_play.gif'); background-size: cover;">
     <nav>
-        <a href="{{ url_for('main.index') }}">FlaskApp</a>
-        <a href="#">Posts</a>
-        <a href="#">Categories</a>
-        <a href="#">Questions</a>
+        <a href="{{ url_for('main.index') }}">HANGMAN</a>
+        <a href="{{ url_for('account.index') }}">Account</a>
+        <a href="{{ url_for('game.index') }}">Game</a>
+        <a href="{{ url_for('statistics.index') }}">Statistics</a>
     </nav>
     <hr>
     <div class="content">
