@@ -1,7 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <span class="title"><h1>{% block title %} The Home Page of FlaskApp {% endblock %}</h1></span>
+
+<title>{% block title %}Hangman{% endblock %}</title>
+
+
+    <nav class ="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+        >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" id="main" href="/">Main</a>
+            <a class="nav-item nav-link" id="account" href="/account">Account</a>
+            <a class="nav-item nav-link" id="game" href="/game">Game</a>
+            <a class="nav-item nav-link" id="statistics" href="/statistics">Statistics</a>
+        </div>
+        </div>
+    </nav>
+            
+
+
+
     <div class="content">
         <h2>This is the main Flask blueprint</h2>
     </div>
