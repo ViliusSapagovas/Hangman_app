@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %} - HANGMAN</title>
-    <style>
-        h2 {
-            width: 100%;
-        }
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous"
+        />
+    
+    </head>
+  <body style="background-image: url('../static/gifs/lets_play.gif'); background-size: cover;">
+  
 
-        .title {
-            margin: 5px;
-            width: 100%;
-        }
-
-        .content {
-            margin: 5px;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        .post {
-            flex: 20%;
-            padding: 10px;
-            margin: 5px;
-            background-color: #f3f3f3;
-            inline-size: 100%;
-        }
-
-        .title a {
-            color: #00a36f;
-            text-decoration: none;
-        }
-
-        nav a {
-            color: #d64161;
-            font-size: 3em;
-            margin-left: 50px;
-            text-decoration: none;
-        }
-
-    </style>
-</head>
-<body style="background-image: url('../static/gifs/lets_play.gif'); background-size: cover;">
-    <nav>
-        <a href="{{ url_for('main.index') }}">HANGMAN</a>
-        <a href="{{ url_for('account.index') }}">Account</a>
-        <a href="{{ url_for('game.index') }}">Game</a>
-        <a href="{{ url_for('statistics.index') }}">Statistics</a>
-    </nav>
-    <hr>
     <div class="content">
         {% block content %} {% endblock %}
     </div>
-</body>
+
+          
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script 
+      type = "text/javascript"
+      src = "{{ url_for('static', filename = 'index.js') }}"></script>
+
+
+  </body>
 </html>
